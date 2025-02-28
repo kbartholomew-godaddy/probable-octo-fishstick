@@ -9,7 +9,8 @@ spec:
     - "{{ .Values.app.name }}.saya.local"
   rules:
     - backendRefs:
-        - kind: Service
+        - group: ""
+          kind: Service
           name: {{ include "workload.fullname" . }}
           port: {{ .Values.service.port }}
           weight: {{ .Values.workload.weight }}
