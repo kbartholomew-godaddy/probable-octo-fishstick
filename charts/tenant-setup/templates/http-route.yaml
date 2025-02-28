@@ -10,8 +10,8 @@ spec:
     - "{{ .Values.app.name }}.saya.local"
   rules:
     - backendRefs:
-        {{ if .Values.environment.artifacts }}
-        {{- range .Values.environment.artifacts }}
+        {{ if .Values.artifacts }}
+        {{- range .Values.artifacts }}
         - group: ""
           kind: Service
           name: "{{ $.Values.app.name }}-{{ $.Values.environment.name }}-{{ .id }}"
