@@ -18,6 +18,8 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
+        com.godaddy/projectId: "1234"
+        com.godaddy/applicationId: "5678"
         {{- include "workload.labels" . | nindent 8 }}
         {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
