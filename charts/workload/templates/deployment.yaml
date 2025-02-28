@@ -36,6 +36,9 @@ spec:
           env:
             - name: ECHO_INCLUDE_ENV_VARS
               value: "1"
+          {{- with .Values.env }}
+            {{- toYaml . | nindent 10 }}
+          {{- end }}
           {{- with .Values.livenessProbe }}
           livenessProbe:
             {{- toYaml . | nindent 12 }}
