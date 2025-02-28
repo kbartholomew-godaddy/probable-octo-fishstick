@@ -11,8 +11,8 @@ spec:
     - backendRefs:
         - kind: Service
           name: {{ include "workload.fullname" . }}
-          port: 80
-          weight: 0
+          port: {{ .Values.service.port }}
+          weight: {{ .Values.workload.weight }}
       matches:
         - path:
             type: PathPrefix
