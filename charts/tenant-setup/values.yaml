@@ -7,11 +7,7 @@ app:
 
 environment:
   name: default
-  artifacts:
-    - name: default
-      id: 0
-      version: latest
-      weight: 0
+  artifacts: []
 
 env: []
 
