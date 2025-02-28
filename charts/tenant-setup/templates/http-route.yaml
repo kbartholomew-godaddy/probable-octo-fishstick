@@ -14,10 +14,10 @@ spec:
         {{- range .Values.environment.artifacts }}
         - group: ""
           kind: Service
-          name: "{{ .name }}-{{ .id }}-workload"
+          name: "{{ $.Values.app.name }}-{{ $.Values.environment.name }}-{{ .id }}"
           port: {{ $.Values.service.port }}
-          weight: {{ .weight }}
+          weight: {{ default .weight 0 }}
         {{- end }}
-        {{- else }}
+        {{- else -}}
         []
         {{- end }}
