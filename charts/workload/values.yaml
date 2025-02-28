@@ -5,6 +5,9 @@
 app:
   name: default
 
+environment:
+  name: default
+
 workload:
   weight: 0
   version: latest
