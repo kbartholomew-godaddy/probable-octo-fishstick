@@ -34,6 +34,8 @@ spec:
               containerPort: 8080
               protocol: TCP
           env:
+            - name: SAYA_APP_NAME
+              value: "{{ .Values.app.name }}"
             - name: ECHO_INCLUDE_ENV_VARS
               value: "1"
           {{- range .Values.env }}
