@@ -5,6 +5,7 @@ metadata:
 spec:
   parentRefs:
     - name: eg
+      namespace: default
   hostnames:
     - "{{ .Values.app.name }}.saya.local"
   rules:
