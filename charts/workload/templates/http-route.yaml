@@ -18,8 +18,8 @@ spec:
         - queryParams:
             - type: Exact
               name: x-katana-version
-              value: {{ .Values.workload.version }}
+              value: {{ .Values.workload.version | quote }}
         - headers:
             - type: Exact
               name: x-katana-version
-              value: {{ .Values.workload.version }}
+              value: {{ .Values.workload.version | quote }}
